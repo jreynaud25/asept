@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Crawlers autorisés explicitement (signal positif)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://www.asept.eu/sitemap.xml
+Host: https://www.asept.eu

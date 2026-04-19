@@ -1,17 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-FR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="author" content="ASEPT" />
+    <meta name="publisher" content="ASEPT" />
+    <meta name="rating" content="general" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="color-scheme" content="light" />
 
     <title>ASEPT – Architectes urbanistes à Paris, Lyon et Marseille</title>
     <meta
       name="description"
-      content="ASEPT est une agence d’architectes urbanistes basée à Paris, Lyon et Marseille. Projets d’architecture, urbanisme et aménagement du territoire."
+      content="ASEPT, agence d’architectes et urbanistes à Paris, Lyon et Marseille. Architecture, urbanisme, aménagement du territoire et maîtrise d’œuvre, du bâtiment à la grande échelle."
     />
-    <meta name="robots" content="index,follow" />
-    <meta http-equiv="Content-Language" content="fr" />
+    <meta
+      name="keywords"
+      content="ASEPT, architecte, urbaniste, agence d’architecture, agence d’urbanisme, architecture Paris, architecture Lyon, architecture Marseille, urbanisme Paris, urbanisme Lyon, urbanisme Marseille, aménagement du territoire, maîtrise d’œuvre, concours d’architecture, projet urbain"
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1" />
+    <meta name="bingbot" content="index,follow" />
+    <meta http-equiv="Content-Language" content="fr-FR" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+
+    <!-- Geo tags : SEO local multi-agences -->
+    <meta name="geo.region" content="FR" />
+    <meta name="geo.placename" content="Paris, Lyon, Marseille" />
+    <meta name="ICBM" content="48.856614, 2.352222" />
+    <meta name="geo.position" content="48.856614;2.352222" />
+
     <link rel="canonical" href="https://www.asept.eu/" />
+    <link rel="alternate" hreflang="fr-FR" href="https://www.asept.eu/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.asept.eu/" />
+
+    <!-- Favicons : signal de confiance SERP + UX onglet -->
+    <link rel="icon" type="image/svg+xml" href="./LOGO-ASEPT-OUTLINE.svg" />
+    <link rel="apple-touch-icon" href="./LOGO-ASEPT-OUTLINE.svg" />
+    <link rel="mask-icon" href="./LOGO-ASEPT-OUTLINE.svg" color="#000000" />
+
+    <!-- Performance : preload LCP (image héros) + police pour limiter le FOIT -->
+    <link
+      rel="preload"
+      as="image"
+      href="./asept_SITE_v0-fond.jpg"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./Switzer-Semibold.otf"
+      type="font/otf"
+      crossorigin="anonymous"
+    />
+
+    <!-- Preconnect / DNS prefetch pour les domaines externes référencés -->
+    <link rel="preconnect" href="https://www.instagram.com" crossorigin />
+    <link rel="dns-prefetch" href="https://www.instagram.com" />
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
@@ -22,11 +69,19 @@
     />
     <meta
       property="og:description"
-      content="ASEPT est une agence d’architectes urbanistes basée à Paris, Lyon et Marseille. Projets d’architecture, urbanisme et aménagement du territoire."
+      content="ASEPT, agence d’architectes et urbanistes à Paris, Lyon et Marseille. Architecture, urbanisme, aménagement du territoire et maîtrise d’œuvre, du bâtiment à la grande échelle."
     />
     <meta property="og:url" content="https://www.asept.eu/" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:image" content="https://www.asept.eu/asept_SITE_v0-fond.jpg" />
+    <meta property="og:image:secure_url" content="https://www.asept.eu/asept_SITE_v0-fond.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="5692" />
+    <meta property="og:image:height" content="3200" />
+    <meta
+      property="og:image:alt"
+      content="ASEPT – agence d’architecture et d’urbanisme, Paris, Lyon, Marseille"
+    />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -36,35 +91,134 @@
     />
     <meta
       name="twitter:description"
-      content="ASEPT est une agence d’architectes urbanistes basée à Paris, Lyon et Marseille. Projets d’architecture, urbanisme et aménagement du territoire."
+      content="ASEPT, agence d’architectes et urbanistes à Paris, Lyon et Marseille. Architecture, urbanisme, aménagement du territoire et maîtrise d’œuvre."
     />
     <meta name="twitter:image" content="https://www.asept.eu/asept_SITE_v0-fond.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="ASEPT – agence d’architecture et d’urbanisme, Paris, Lyon, Marseille"
+    />
 
-    <!-- JSON-LD structured data -->
+    <!-- JSON-LD : données structurées enrichies (Organization + 3 LocalBusiness + WebSite + WebPage) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "ASEPT",
-        "url": "https://www.asept.eu/",
-        "telephone": "+33 4 72 07 79 49",
-        "email": "bonjour@asept.eu",
-        "sameAs": ["https://www.instagram.com/asept.eu/?hl=fr"],
-        "address": [
+        "@graph": [
           {
-            "@type": "PostalAddress",
-            "addressLocality": "Paris",
-            "addressCountry": "FR"
+            "@type": ["Organization", "ProfessionalService"],
+            "@id": "https://www.asept.eu/#organization",
+            "name": "ASEPT",
+            "legalName": "ASEPT",
+            "alternateName": "ASEPT – Architectes urbanistes",
+            "description": "Agence d’architectes et urbanistes intervenant à Paris, Lyon et Marseille sur des projets d’architecture, d’urbanisme et d’aménagement du territoire.",
+            "url": "https://www.asept.eu/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.asept.eu/LOGO-ASEPT-OUTLINE.svg",
+              "contentUrl": "https://www.asept.eu/LOGO-ASEPT-OUTLINE.svg",
+              "caption": "Logo ASEPT"
+            },
+            "image": "https://www.asept.eu/asept_SITE_v0-fond.jpg",
+            "telephone": "+33472077949",
+            "email": "bonjour@asept.eu",
+            "areaServed": [
+              { "@type": "Country", "name": "France" },
+              { "@type": "City", "name": "Paris" },
+              { "@type": "City", "name": "Lyon" },
+              { "@type": "City", "name": "Marseille" }
+            ],
+            "knowsAbout": [
+              "Architecture",
+              "Urbanisme",
+              "Aménagement du territoire",
+              "Maîtrise d’œuvre",
+              "Concours d’architecture",
+              "Projet urbain"
+            ],
+            "sameAs": ["https://www.instagram.com/asept.eu/"],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "bonjour@asept.eu",
+                "telephone": "+33472077949",
+                "availableLanguage": ["French", "English"],
+                "areaServed": "FR"
+              }
+            ]
           },
           {
-            "@type": "PostalAddress",
-            "addressLocality": "Lyon",
-            "addressCountry": "FR"
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://www.asept.eu/#agence-paris",
+            "name": "ASEPT – Paris",
+            "parentOrganization": { "@id": "https://www.asept.eu/#organization" },
+            "url": "https://www.asept.eu/",
+            "image": "https://www.asept.eu/asept_SITE_v0-fond.jpg",
+            "telephone": "+33472077949",
+            "email": "bonjour@asept.eu",
+            "priceRange": "€€€",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Paris",
+              "addressRegion": "Île-de-France",
+              "addressCountry": "FR"
+            },
+            "areaServed": { "@type": "City", "name": "Paris" }
           },
           {
-            "@type": "PostalAddress",
-            "addressLocality": "Marseille",
-            "addressCountry": "FR"
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://www.asept.eu/#agence-lyon",
+            "name": "ASEPT – Lyon",
+            "parentOrganization": { "@id": "https://www.asept.eu/#organization" },
+            "url": "https://www.asept.eu/",
+            "image": "https://www.asept.eu/asept_SITE_v0-fond.jpg",
+            "telephone": "+33472077949",
+            "email": "bonjour@asept.eu",
+            "priceRange": "€€€",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lyon",
+              "addressRegion": "Auvergne-Rhône-Alpes",
+              "addressCountry": "FR"
+            },
+            "areaServed": { "@type": "City", "name": "Lyon" }
+          },
+          {
+            "@type": ["LocalBusiness", "ProfessionalService"],
+            "@id": "https://www.asept.eu/#agence-marseille",
+            "name": "ASEPT – Marseille",
+            "parentOrganization": { "@id": "https://www.asept.eu/#organization" },
+            "url": "https://www.asept.eu/",
+            "image": "https://www.asept.eu/asept_SITE_v0-fond.jpg",
+            "telephone": "+33472077949",
+            "email": "bonjour@asept.eu",
+            "priceRange": "€€€",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Marseille",
+              "addressRegion": "Provence-Alpes-Côte d’Azur",
+              "addressCountry": "FR"
+            },
+            "areaServed": { "@type": "City", "name": "Marseille" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.asept.eu/#website",
+            "url": "https://www.asept.eu/",
+            "name": "ASEPT",
+            "description": "Site officiel d’ASEPT, agence d’architectes et urbanistes à Paris, Lyon et Marseille.",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "https://www.asept.eu/#organization" }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://www.asept.eu/#webpage",
+            "url": "https://www.asept.eu/",
+            "name": "ASEPT – Architectes urbanistes à Paris, Lyon et Marseille",
+            "isPartOf": { "@id": "https://www.asept.eu/#website" },
+            "about": { "@id": "https://www.asept.eu/#organization" },
+            "primaryImageOfPage": "https://www.asept.eu/asept_SITE_v0-fond.jpg",
+            "inLanguage": "fr-FR"
           }
         ]
       }
@@ -198,7 +352,17 @@
 
       @font-face {
         font-family: switzer; /* set name */
-        src: url(./Switzer-Semibold.otf); /* url of the font */
+        src: url(./Switzer-Semibold.otf) format("opentype"); /* url of the font */
+        font-display: swap;
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+        overscroll-behavior: none;
       }
 
       body {
@@ -346,7 +510,11 @@
     <main class="image-wrapper">
       <img
         src="./asept_SITE_v0-fond.jpg"
-        alt="ASEPT – agence d’architecture et d’urbanisme"
+        alt="ASEPT – agence d’architectes et d’urbanistes à Paris, Lyon et Marseille"
+        width="5692"
+        height="3200"
+        fetchpriority="high"
+        decoding="async"
       />
 
       <!-- Titre principal pour le SEO et l’accessibilité -->
